@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BorsaUygulama.Pages.GirisYap"
+             Title="GirisYap"
+             BackgroundImageSource="giris_bg_last.png">
+
+    <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0">
+
+        <Label 
+            HorizontalOptions="Center"
+            TextColor="White"
+            Text="Borsa Kaydınıza Hoşgeldiniz"
+            FontAttributes="Bold"
+            FontSize="Large"/>
+
+        <Entry 
+            Placeholder="Kullanıcı Adı"
+            BackgroundColor="DarkGoldenrod"
+            TextColor="WhiteSmoke"
+            WidthRequest="300" 
+            x:Name="entryKullaniciAd"/>
+
+        <Entry 
+            Placeholder="Şifre"
+            BackgroundColor="DarkGoldenrod"
+            TextColor="WhiteSmoke"
+            WidthRequest="300" 
+            IsPassword="True"
+            x:Name="entrySifre"/>
+
+        <Label
+            x:Name="Yanlis_giris_bilgileri"
+            Text="Giriş Biligileriniz Doğru Değil!"
+            HorizontalOptions="Center"
+            WidthRequest="300"
+            IsVisible="false"
+            TextColor="Cyan"/>
+
+        <Button 
+            Text="Giriş Yap" 
+            WidthRequest="300"
+            BackgroundColor="Green" 
+            x:Name="btnGiris"
+            Pressed="btnGiris_Pressed"
+            Released="btnGiris_Released"/>
+
+        <Button 
+            Text="Üye Ol"
+            WidthRequest="300" 
+            BackgroundColor="Yellow"  
+            x:Name="btnUyeOl"
+            Pressed="btnUyeOl_Pressed"
+            Released="btnUyeOl_Released"/>
+
+    </VerticalStackLayout>
+</ContentPage>
